@@ -367,14 +367,7 @@
                 document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + "; path=/;"
             }
 
-            function get_Cookie(name) {
-                name = "easter" + name;
-                var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-                if (arr = document.cookie.match(reg)) {
-                    return unescape(arr[2]);
-                }
-                return '';
-            }
+            
 
             function getQueryString(name) {
                 var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
